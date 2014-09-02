@@ -4,4 +4,7 @@
  you can do this -> list2.add(new Integer(0));  it will work, but as we can see it's too dangerous. so 
  watch out to code like this one.
  
- *Pay attention when using a list like this List<? extends Something> you cannot add to the collection.
+ *Pay attention to when using a list like this List<? extends Something> you cannot add to the collection.
+ 
+ *Remember that exclusive and inclusive regarding NavigableMap/Set return the start/end point if it's true or false 
+ and when not specified this exclusive/inclusive flag it returns a SortedSet.  
