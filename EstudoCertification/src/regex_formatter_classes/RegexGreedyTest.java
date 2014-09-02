@@ -3,6 +3,12 @@ package regex_formatter_classes;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Learning how to deal with greedy quantifiers 
+ * 
+ * @author ALSGomes
+ *
+ */
 public class RegexGreedyTest {
 	
 	public static void main(String[] args) {
