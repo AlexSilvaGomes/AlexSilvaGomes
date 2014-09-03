@@ -2,6 +2,10 @@ package collection_generics;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author ALSGomes
+ * Simple test abou generics
+ */
 public class testGenerics {
 	
 	public static void main(String args[]) {
