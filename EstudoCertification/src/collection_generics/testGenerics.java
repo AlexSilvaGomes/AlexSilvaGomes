@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @author ALSGomes
- * Simple test abou generics
+ * Simple test about generics
  */
 public class testGenerics {
 	
