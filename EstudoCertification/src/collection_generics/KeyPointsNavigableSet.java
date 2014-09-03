@@ -15,7 +15,7 @@ public class KeyPointsNavigableSet {
 		nav.add("D");
 		nav.add("E");	
 		
-		// Testing inclusive
+		// Testing flag inclusive and exclusive 
 		SortedSet tail = (NavigableSet)nav.tailSet("A");
 		NavigableSet head = nav.headSet("E",true );
 		NavigableSet sub = nav.subSet("A",false,"E",false);
