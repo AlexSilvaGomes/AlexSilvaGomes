@@ -1,5 +1,10 @@
 package array;
 
+/**
+ * @author ALSGomes
+ * Testing passing array by reference
+ * 
+ */
 public class Tester {
 
 	static void test(int[] a) {
