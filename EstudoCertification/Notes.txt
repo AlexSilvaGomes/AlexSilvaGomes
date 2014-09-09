@@ -8,3 +8,12 @@
  
  *Remember that exclusive and inclusive regarding NavigableMap/Set return the start/end point if it's true or false 
  and when not specified this exclusive/inclusive flag it returns a SortedSet.  
+ 
+ * Any line After a code like that -> for(;;);  you will get a compilation error,
+  because this code will be unreachable
+  
+ *Downcast works just when you have a chance that this object could be of the expected type 
+ otherwise you get a ClassNotFoundException
+ Ex: if you gotta a Dog within an Animal reference you can downcast without problem dog=(Dog)animal (implicit downcast)
+ however if you gotta an animal object within an animal reference you can't downcast , because Dog cannot handle 
+ an Animal
