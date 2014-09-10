@@ -2,6 +2,10 @@ package io;
 
 import java.io.*;
 
+/**
+ * @author ALSGomes
+ *
+ */
 public class TestIO {
 
 	public void method() {
