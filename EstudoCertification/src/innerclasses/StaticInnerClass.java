@@ -4,7 +4,7 @@ package innerclasses;
 
 /**
  * @author Alex
- * Showing the correct instanciating of a static inner class
+ * Showing the correct instantiating of a static inner class
  */
 public class StaticInnerClass{
 	
