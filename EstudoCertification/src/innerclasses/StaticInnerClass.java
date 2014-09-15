@@ -28,6 +28,7 @@ public class StaticInnerClass{
 
 class outer{
 	public void method(){
+		// Here is the key point about static inner class instantiation
 		StaticInnerClass.Bar b = new StaticInnerClass.Bar();
 	}
 }
