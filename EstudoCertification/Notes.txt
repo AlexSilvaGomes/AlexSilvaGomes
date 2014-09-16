@@ -17,3 +17,5 @@
  Ex: if you gotta a Dog within an Animal reference you can downcast without problem dog=(Dog)animal (implicit downcast)
  however if you gotta an animal object within an animal reference you can't downcast , because Dog cannot handle 
  an Animal
+ 
+ * watch out for regex code like that ' . ' this token represents any character that is gonna be put in the Pattern.Macher
