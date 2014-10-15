@@ -19,3 +19,18 @@
  an Animal
  
  * watch out for regex code like that ' . ' this token represents any character that is gonna be put in the Pattern.Macher
+ 
+ * List lst2=new Vector<String>(); in this case the generic type is correct we don't even get 
+ a warning return ,the opposite is false, in other words when we specify the reference but no the object,
+  we get warning on the compilation.
+  
+ *The keyword "synchronized" can be used with any access modifier (except abstract).
+ 
+ * Pay attention to this , when we declare two methods receiving varargs as arguments,
+  the method which will call it will have an ambiguous error , unless it has another method to define the call.
+  @see class Gened to review.
+  
+  * Do not forget it is quite possible to synchronize on this synchronized("x") get from string poll.
+  
+  * String builder and string buffer there is no concat method watch out 
+ 
