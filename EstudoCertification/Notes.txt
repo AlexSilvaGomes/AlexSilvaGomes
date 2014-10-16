@@ -33,4 +33,7 @@
   * Do not forget it is quite possible to synchronize on this synchronized("x") get from string poll.
   
   * String builder and string buffer there is no concat method watch out 
+  
+  *When using -cp in order to compile from shell, remember we gotta put [name.jar] 
+  when the resource come from a jar file.
  

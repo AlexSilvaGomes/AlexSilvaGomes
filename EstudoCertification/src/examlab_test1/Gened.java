@@ -1,4 +1,4 @@
-package certpal_test1;
+package examlab_test1;
 public class Gened{
 
   public static void main(String argv[]){
