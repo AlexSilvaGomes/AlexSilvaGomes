@@ -1,41 +1,43 @@
-* When is assigned a safe list to a unsafe list like this ->
+1. When is assigned a safe list to a unsafe list like this ->
  List<String> list1 = new ArrayList<String>();
  List list2 = list1;
  you can do this -> list2.add(new Integer(0));  it will work, but as we can see it's too dangerous. so 
  watch out to code like this one.
  
- *Pay attention to when using a list like this List<? extends Something> you cannot add to the collection.
+2. Pay attention to when using a list like this List<? extends Something> you cannot add to the collection.
  
- *Remember that exclusive and inclusive regarding NavigableMap/Set return the start/end point if it's true or false 
+3. Remember that exclusive and inclusive regarding NavigableMap/Set return the start/end point if it's true or false 
  and when not specified this exclusive/inclusive flag it returns a SortedSet.  
  
- * Any line After a code like that -> for(;;);  you will get a compilation error,
+4. Any line After a code like that -> for(;;);  you will get a compilation error,
   because this code will be unreachable
   
- *Downcast works just when you have a chance that this object could be of the expected type 
+5. Downcast works just when you have a chance that this object could be of the expected type 
  otherwise you get a ClassNotFoundException
  Ex: if you gotta a Dog within an Animal reference you can downcast without problem dog=(Dog)animal (implicit downcast)
  however if you gotta an animal object within an animal reference you can't downcast , because Dog cannot handle 
  an Animal
  
- * watch out for regex code like that ' . ' this token represents any character that is gonna be put in the Pattern.Macher
+6. watch out for regex code like that ' . ' this token represents any character that is gonna be put in the Pattern.Macher
  
- * List lst2=new Vector<String>(); in this case the generic type is correct we don't even get 
+7. List lst2=new Vector<String>(); in this case the generic type is correct we don't even get 
  a warning return ,the opposite is false, in other words when we specify the reference but no the object,
   we get warning on the compilation.
   
- *The keyword "synchronized" can be used with any access modifier (except abstract).
+8. The keyword "synchronized" can be used with any access modifier (except abstract).
  
- * Pay attention to this , when we declare two methods receiving varargs as arguments,
+9. Pay attention to this , when we declare two methods receiving varargs as arguments,
   the method which will call it will have an ambiguous error , unless it has another method to define the call.
   @see class Gened to review.
   
-  * Do not forget it is quite possible to synchronize on this synchronized("x") get from string poll.
+10. Do not forget it is quite possible to synchronize on this synchronized("x") get from string poll.
   
-  * String builder and string buffer there is no concat method watch out 
+11. String builder and string buffer there is no concat method watch out 
   
-  *When using -cp in order to compile from shell, remember we gotta put [name.jar] 
+12. When using -cp in order to compile from shell, remember we gotta put [name.jar] 
   when the resource come from a jar file.
   
-  *pay attention to the reserved words in java: goto const although not used anymore.
+13. pay attention to the reserved words in java: goto const although not used anymore.
+  
+14. Inner classes cannot have static declarations watch out this.
  
