@@ -1,7 +1,10 @@
 package examlab_test1;
+
+	
 public class Gened{
 
-  public static void main(String argv[]){
+  public static void main(String argv[]){	
+	  
    // doNumber(2); error here ambiguous 
     /*doNumber(2L);
     doNumber(new int[]{1,2,3,4});

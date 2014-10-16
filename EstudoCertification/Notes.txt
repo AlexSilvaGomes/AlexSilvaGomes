@@ -36,4 +36,6 @@
   
   *When using -cp in order to compile from shell, remember we gotta put [name.jar] 
   when the resource come from a jar file.
+  
+  *pay attention to the reserved words in java: goto const although not used anymore.
  
