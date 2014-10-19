@@ -26,8 +26,9 @@
   
 8. The keyword "synchronized" can be used with any access modifier (except abstract).
  
-9. Pay attention to this , when we declare two methods receiving varargs as arguments,
-  the method which will call it will have an ambiguous error , unless it has another method to define the call.
+9. Pay attention to this , when we declare two methods receiving varargs as arguments, ex. (int... i) and (Integer... i)
+  the statement which will call it will have an ambiguous error , unless it has another method to define the call.
+  besides that a varargs(int... i) and array(int[] i) are meaningfully so it leads to a compile error
   @see class Gened to review.
   
 10. Do not forget it is quite possible to synchronize on this synchronized("x") get from string poll.
@@ -40,4 +41,25 @@
 13. pay attention to the reserved words in java: goto const although not used anymore.
   
 14. Inner classes cannot have static declarations watch out this.
+
+15. Pay close attention , the only wrapper which don't take a string in its valueOf method is the Character 
+it only receive a char , like this  Character.valueOf(char)
+
+16. regarding scanner ex: hasNextLog() what separate this type of data are spaces so if you have
+1 2 A B 3, it will result in a  1 2 , because 3 after A and B are ignored.
+
+17. Just to remember RuntimeException is a sub exception(child) of Exception and if I declare a try catch 
+like that try{ }catch(Exception e){} I don't need necessarily throw a exception in the try scope.
+
+18. Another point to take note about printf , if you put a %b in a number index like that "%b,123" 
+the result would be true.
+
+19. Ways to suggest gc: Runtime.getRuntime().gc(); and System.gc(); -> this one  is a static method.
+
+20. you gotta bear in mind that throwable is a checked exception.
+
+21. this statment leads to a compile error String s = new String(null); because the string class has two versions of overloaded
+constructor becoming ambiguous which one to call.
+ 
+
  
