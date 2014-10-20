@@ -60,6 +60,13 @@ the result would be true.
 
 21. this statment leads to a compile error String s = new String(null); because the string class has two versions of overloaded
 constructor becoming ambiguous which one to call.
- 
+
+22. About printf or formatter classes , when I have a String s= "false"; and the following code
+System.out.printf("%b",s);  the result is always true.
+
+23, in the locale(String language) constructor pay attention to this the first argument is always 
+the string language then the country if it's desired.
+
+24.  the following methods are declared in both String and StringBuffer classes: charAt(),subString() and length();
 
  
