@@ -120,6 +120,10 @@ final int i = 5; //  that way you can use in the local-method inner class.
 
 45. watch out for the method Object.wait() throw a InterruptedException 
 
-46. because the renameTo(-) method in java.io.File class takes only one (another) File instance
+46. because the renameTo(-) method in java.io.File class takes only one (another) File instance[
+
+47. About Printf and Formatter classes %[arg_index$][flags][width][.precision]conversion char
+
+48. final variable must be initialized in its declaration line or in the costructor
 
  

@@ -2,17 +2,18 @@ package test;
 
 import java.util.Formatter;
 
-public class AuxTest {
+public  strictfp class AuxTest {
 
+	
 	public static void main(String[] args) {
-		 String[] sa[]=new String[2][2];
-		    sa[0]=new String[]{"A","B","C","D"};
-		    sa[1]=new String[]{"Aa","Bb","CC"};
-		    sa[2]= new String[1];
-		     for(String[] s:sa){
-		       System.out.print(s[1]+", ");
-		       System.out.print(s[2]+", ");
-		     }
+		
+		boolean b1=false;
+		 boolean b2=true;
+		 Object ob= (b2=false)?((b1=true)?"A":(b1=false)?"B":9800L):((b1=false)?"C":(b2==false)?"D":new java.util.Date());
+		 System.out.print(ob);
+		
+		System.out.printf("\nCurrent value is %,+-50.1f",-12300.000);
+		
 	}
 	
 }
