@@ -69,4 +69,57 @@ the string language then the country if it's desired.
 
 24.  the following methods are declared in both String and StringBuffer classes: charAt(),subString() and length();
 
+25. When I use a Enum as constant in a case statement I have to specify just the Constant like this 
+enum Letter{A,B,C }    ... case  A: //do something 
+
+26. All subclass must implement methods of its abstract superclass but whether this subclass isn't abstract.
+
+27. This abstract class must be implemented by the first concrete class. 
+
+28. In case of an overloaded method which receive as parameter an object, what we have to consider in the called is the reference of the object passed as argument. Unlike overridden method which what determine the version(subclass or superclass) of the method to call is the object in runtime.
+
+29. To declare an array, remember that if it's an unidimensional array the size of the array after the key new between the blankets is mandatory like this new int [2] 
+but if it's a multidimensional array just the first size is necessary new int [4][] correct!
+
+30. Pay attention to this syntax   public void anyMethod( List<? super Dog> animals) when you need to pass any type up dog and desire to use the sintaxe  animals.add(something), if you don't use this sintaxe the code doesn't compile.
+
+31. A List like this List<?> can receive any type of list, different of a list of objects List<Object>. 
+
+32. Pay attention to the token <T> that represent any type about generic.
+
+33. Once a thread has been started, it can never be started again.
+
+34. This declaration is legal Object [] object = new String[5][5]; it was tested!
+
+35. This declaration will lead you to a compilation error System.out.println(PinSize.BIG > PinSize.BIGGERER); 
+
+36. Maps can be iterated either by using the keyset or the entry set .
+
+37. About threads, you can only synchronize on objects. 
+Pay attention to what a method returns to understand if the code can synchronize on it or not.
+
+38. About Methods Inner Classes.You must always instantiate a inner class that is within a method, after its declaration.
+
+39. Pay close attention to this, when closing declarations of inner classes declared as parameter of a method  }); different from the normal one like };
+Normal declaration ->
+Obj o = new Class(){ void overridenMethod(){} };
+as a parameter->  void method(new Obj(){ void overridenMethod(){ } });
+I think you got it! :) 
+
+40. Another Important point about static inner classes is that you have to create an instance of it, even being static, so you gotta do this -> InnerClass inner = new InnerClass(); from inside a static method or not.
+
+41. Do not forget , concerning inner classes, to use a variable within a local-method inner class you gotta put final in its declaration
+like this ->
+final int i = 5; //  that way you can use in the local-method inner class. 
+ 
+42. When using headSet , tailSet, subSet from navigableMap you have to keep the range while adding new elements otherwise you get a runtimeException -> IllegalArgumentException
+
+43. native methods there is no body.  public void native method();
+
+44. Interface methods are always abstract that's why you can't declare it as static, abstract and static does't match
+
+45. watch out for the method Object.wait() throw a InterruptedException 
+
+46. because the renameTo(-) method in java.io.File class takes only one (another) File instance
+
  
