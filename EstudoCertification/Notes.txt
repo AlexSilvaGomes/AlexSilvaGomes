@@ -122,4 +122,6 @@ final int i = 5; //  that way you can use in the local-method inner class.
 
 46. because the renameTo(-) method in java.io.File class takes only one (another) File instance
 
+47. Java.io class has its own implementation if equals method
+
  
