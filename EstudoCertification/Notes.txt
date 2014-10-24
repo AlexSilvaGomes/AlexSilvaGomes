@@ -133,6 +133,16 @@ from the number 7 it works , in other words a subtraction minus 6 is made.
 
 51. Pattern local where you can store a jar for the application  Location: $[Java_Home]/jre/lib/ext/
 
+52. You can cast between any two interfaces at **compile time**, even though they are not in the same hierarchy root.
+For an example, following cast is valid at compile time:
+Serializable i = null; // null or anything.    
+Comparable cm=(Comparable)(Cloneable)(Iterable)(Runnable)i;
+
+53. The combination "final volatile" is invalid.
+
+
+
+
 
 
 

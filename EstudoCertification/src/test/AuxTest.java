@@ -1,11 +1,23 @@
 package test;
 
 
-public  strictfp class AuxTest {
+public abstract strictfp class AuxTest {
 
+	
+	 protected abstract void method();
+		
+	 public <E extends B> E getValue(E e){
+		 return e;
+	 }
+	
 	
 	public static void main(String[] args) {
         
+		
+		A a = new B();
+		B b = (B) new A();
+		
+		
 		A[] ab = new A[5];
 		ab[0]=new A();
         
