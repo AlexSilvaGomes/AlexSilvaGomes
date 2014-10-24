@@ -126,4 +126,6 @@ final int i = 5; //  that way you can use in the local-method inner class.
 
 48. final variable must be initialized in its declaration line or in the costructor
 
+47. Java.io class has its own implementation if equals method
+
  
