@@ -126,6 +126,15 @@ final int i = 5; //  that way you can use in the local-method inner class.
 
 48. final variable must be initialized in its declaration line or in the costructor
 
-47. Java.io class has its own implementation if equals method
+49. Java.io class has its own implementation if equals method
+
+50. When is used the flag < , > with a decimal < d > in the printf the number is formatted and using width 
+from the number 7 it works , in other words a subtraction minus 6 is made.
+
+51. Pattern local where you can store a jar for the application  Location: $[Java_Home]/jre/lib/ext/
+
+
+
+
 
  
