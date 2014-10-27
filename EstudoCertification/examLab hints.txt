@@ -1,0 +1,321 @@
+
+Premium Account
+My Features
+Welcome, Alex!
+Take a test
+
+Diagnostic Exam
+60 questions. 150 minutes
+Practice Exam 1
+60 questions. 150 minutes
+Practice Exam 2
+60 questions. 150 minutes
+Practice Exam 3
+60 questions. 150 minutes
+Practice Exam 4
+60 questions. 150 minutes
+Final Exam
+60 questions. 150 minutes
+Pass Guaranteed Exam
+21 questions. 8 time
+Features
+
+Systemup™
+My Test Results
+Pass Guaranteed Results
+
+We have analyzed the answers you have submitted. Accordingly, following content has been generated for you to ensure your exam pass. Please read the exam hints generated for you. We assure your exam pass, with a 100% money-back guarantee.
+Exam hints generated for you
+
+Following exam-oriented hints are generated analyzing your answers and speculating what additional things you must know to pass the exam. Please print this page or write down these facts on a piece of paper. Make sure you have concerned all of these hints before you attend the exam.
+1
+"Meta characters" are the characters what you can use inside a "regular expression" (Pattern, Scanner...). Meta characters must be started with a back-slash (\)
+
+"Conversion characters" are the characters what you can use at the end of an printf expression. Conversion characters must NOT be started with a back-slash (\)
+2
+When you create an array, its instantiation array type must be either same, or a sub-type of the reference array type. If B extends A,
+
+A[] ab = new B[5]; // CORRECT
+
+
+Now, when you add objects to the array, the object you add must be either same, or a sub-type of A, to be able to compile. It must be B, or a sub-type of B, to be able to run. If you attempt to add an object of which the type is NOT B (or a sub-type of B), it will throw ArrayStoreException. Example:
+
+class A{}
+class B extends A{}
+class X extends A{}
+...
+A[] ab = new B[5];
+ab[0] = new X(); // throws ArrayStoreException
+3
+You can cast between any two interfaces at **compile time**, even though they are not in the same hierarchy root.
+For an example, following cast is valid at compile time:
+
+Serializable i = null; // null or anything.    
+Comparable cm=(Comparable)(Cloneable)(Iterable)(Runnable)i;
+4
+In wrapper classes, parseXxx() methods return primitive values and valueOf(xx) methods return wrapper objects. If you see something like Integer.parseInt("1").toString() in the exam, make sure you spot it out that it won't compile, because parseInt(-) returns a primitive and you can't call a method (toString()) on a primitive value.
+5
+String class has many overloaded constructors, including String(String) and String(char[]). Passing null makes the compiler ambiguous about which overloaded version should be invoked, so it won't let you compile: new String(null);
+6
+When an exception is thrown in an initialization block, it will be wrapped up by ExceptionInInitializerError exception. Example:
+
+class A{
+
+   static{
+      int x = 4/0;
+   }
+
+   public static void main(String [] args){
+   }
+
+}
+
+
+The code in the static initializer actually throws ArithmeticException as it attempts to divide by zero. However, the thrown ArithmeticException will be wrapped by in ExceptionInIntializerError
+7
+java.io.Console.readLine() returns a String value which represents the text entered by the user. Due to Java pooling mechanism of String literals, it is possible for the so entered password to be pooled in the heap. Hence if this method is used to input the password, it is possible for a someone with a bad intention to steal that password out from the String pool!. Therefore, this method is not secured on password reading.
+
+java.io.Console.readPassword() returns a char array (char[]) which represents the password,  instead of a String. Since array objects are not poolable in the JVM heap, the program can completely destroy the array, after validating the password.
+8
+The non-static method format(String, Object...) in Formatter class can be used as same as to System.out.printf method. However, this method will NOT print anything on console - instead, it returns the same Formatter instance, with the formatted output in it.
+9
+Note that when there is a return statement in a try/catch block, which also has an associated finally block, the return action will be 'paused' giving a chance for the finally block to be executed. When the finally block has a return statement too, it will be executed right as it reaches, so the 'paused' action in the try/catch block is suppressed.
+
+try{
+     return "A";
+}finally{
+     return "B";
+}
+
+
+This will always return "B", and as it returns out from the method, "A" will never be returned.
+10
+To be able to cast something at compile time, or to be able to compare with instanceof operator, *at least one* the following conditions should meet:
+
+1. Both reference types should be in same hierarchy root:
+
+class A{}  class B extends A{} 
+
+    then,
+
+A a = new B();
+B b = (A)a; // compiles
+
+
+
+2. One type should be an interface, and the other one should be a *non-final* class:
+
+class A{}   interface X{}
+
+    then,
+
+A a = new A();
+X x = (X)a; // compiles
+a = (A)x; // compiles
+
+
+   * This would NOT compile if class A was final.
+11
+If you try to add non sortable objects to a tree implementation, it will throw ClassCastException.
+
+TreeSet<A> as = new TreeSet<A>();
+A a = new A();
+as.add(a); // throws ClassCastException if A is not sortable
+
+
+'A' would be sortable if it implements Comparable interface. The same phenomenon is applicable for all attempts to sort things.
+
+Another example would be Arrays.sort(-) method, which sorts an array. If the array contains an element that does not implement Comparable, it will throw ClassCastException.
+12
+String is a final class and cannot be extended. In the exam, if you see some code that attempts to extend String, make sure you spot it out that it will NOT compile.
+13
+The volatile keyword is not in the exam. But for the SCJP/OCPJP examination, you MUST know that volatile keyword can be used on variable declaration, and the combination "final volatile" is invalid. That's all what you are expected to know about the volatile keyword.
+14
+When we use enums for switch expressions, you can't specify the enum TYPE in the 'case' expressions - you can only specify naked enum values without their types.
+Example:
+
+enum Manifest{A, B, C, D}
+
+
+Manifest m = Manifest.C;
+switch(m){
+     case Manifest.A : // WRONG
+     case A : // CORRECT
+}
+15
+You can't create a constructor in an anonymous inner class. If you want to pass an argument to the super class constructor, you can do so by passing a value at the creation of your anonymous inner class:
+
+MyClass obj = new MyClass("some value"){
+     // ...
+}
+
+
+In the above code, "some value" goes to the super-class constructor of MyClass. It is similar to calling super("some value"); from a sub class of MyClass.
+16
+Inside the 'for' parameters, the middle expression (second expression) should be a boolean expression. Other operands (first and third) can be any STATEMENT. However, the last operand (third one) should not be ended with a semi-colon. Example:
+
+for(System.out.println("A"); true; Thread.sleep(1000)){
+			   System.out.println("B");
+}
+17
+In method overloading, there is no difference between an array and a var-arg of the same type used as a method parameter. Therefore, method signatures in both printFirst(int...) and printFirst(int[]) are considered to be equivalent.
+18
+In Java IO system, flush() methods are only available in writers (FileWriter, BufferedWriter, etc), and output-streams (FileOutputStream, DataOutputStream, etc).
+19
+The classes Thread, Integer, Long, Object, Collections, Arrays and Scanner are currently available in the SCJP 6.0 objectives. So you have to pay more attention about which are static and which are not. The good news is it is easy to remember - just read the JavaSE documentation asking yourself questions like "why this method is static?, or "why this method is non-static?"
+
+For an example, "Integer.parseInt" is static, because parsing an integer is something we can do independent to the state of the current object. We don't need to have an object of Integer to parse a another integer, right? So why should it be non-static?
+
+On the other hand, the method "Thread.join" is non-static, because it may join the current thread to the "specified" thread. That means, an object of Thread instance is needed, and that's what it will join with the other thread that was given as the argument passed to this method. That's why that method is non-static.
+20
+When there are two overloaded versions of a method as one taking primitive var-args and the other taking wrapper var-args, you can't call it passing any primitive or wrapper value.
+
+void method(Integer... i) {}
+
+void method(int... i) {}
+
+
+You can never call any of these overloaded methods.
+21
+A final class can have both final and non-final methods. However, since a final class cannot be extended, there is no way to override even a non-final method in a final class. In the exam, if you were given to answer based on whether a non-final method in a final class can be overridden, keep the above simple fact in mind.
+22
+When you see "synchronized" in a program, do NOT assume that it will always prevent synchronous access. Instead, carefully check how the monitor locks of objects are obtained by each thread. Synchronous access will only be prevented when a thread has to wait for the monitor lock of the SAME object, that another thread has owned.
+23
+An int value cannot directly be auto-boxed to something like Double - it can only be auto-boxed to Integer. So the following statement will not compile:
+
+Double d = 4; // ERROR
+24
+You can never assign an int array (int[]) to an Integer wrapper array (Integer[]). Following line will not compile:
+
+Integer[] x = new int[4]; // ERROR
+25
+Runnable is an interface. The one and only method prototype declared in this interface is "public void run()". Because of that reason, you can never call .start() method on a Runnable reference.
+26
+Even though java.lang.Exception is a checked exception, you don't need to have anything in the try{} block to have a catch(Exception) block. For example, this is valid:
+
+try{
+      // nothing
+}catch(Exception e){
+}
+
+
+This is a special case of checked exceptions, as catching all other checked exceptions require something in the try block which could throw that particular exception. For example, if you add a catch(IOException e) block, there must be a statement in the try block that throw IOException (or a subtype), or calls to a method which is declared with "throws IOException" (or a subtype).
+27
+Variable-length arguments and arrays cannot be used together in a method parameter. All of the followings are wrong:
+
+main(String[]... args)
+main(String...[] args)
+main(String... args[])
+28
+The first argument you pass to the Locale(String) constructor, should be the 'language'. If you want to mention a country, you have to pass the country-ISO-code, as the SECOND argument. Example:
+
+Locale lc=new Locale("en","gb");
+29
+The -classpath (or -cp) can be used at the compilation (javac) to access the resources needed for the java file. If class A needs to access resources in pack.jar, the path to pack.jar should be given by -cp or -classpath as below:
+
+javac -cp pack.jar A.java (Where A.java is the source code to be compiled).
+
+You can also specify the destination, where the .class file should be created. The option -d can be used to specify the above destination directory. To specify the current directory, you can use the dot(.) operator, in front of -d as below:
+
+javac -d . -cp Pack.jar A.java
+
+If the class A needs to access some resources in pack.jar to run, pack.jar should be located with -cp option. The symbol colon(:) can be used to separate the current location(.) and pack.jar
+
+java -cp .:Pack.jar A
+
+Note: The symbol colon(:) is valid only for UNIX based systems. The equivalent separator for Windows based systems is a semicolon (;). Be careful to note that the questions in the real exam are made targeting the UNIX platform.
+30
+A static inner class can be instantiated without having an instance of the outer class. Most importantly, static inner class can NOT be instantiated WITH an instance of the outer class. If A is the outer class, and B is a STATIC inner class of A,
+
+A a = new A();
+a.new B(); // WRONG
+new A.B(); // CORRECT
+31
+Vector, Hashtable are two collection implementations that provide thread-safe access. What that means is methods in these classes are synchronized. 
+
+Vector<String> vc = new Vector<String>();
+vc.add("ExamLab");
+
+
+Calling to the .add(-) method as above makes the calling thread obtain the monitor lock of the object 'vc', which will only be released after the completion of that method.
+32
+For methods, following modifiers can NOT be used with "abstract" together.
+
+* static
+* private
+* protected
+* public
+* strictfp
+33
+The method "concat" is available only in String. It is not available in StringBuilder or StringBuffer.
+34
+The file name of a .java file must always be same as the name of the public outer class defined in that file, if there was such. That is the reason why there can be only one public class per .java file. However, note that you can have one or more public/protected/private/default inner classes.
+35
+if class B extends A. Then,
+
+A ab = new B();
+ab.myMethod();
+
+If myMethod() exists in A, but not in B,
+   - will compile, and execute A's implementation
+
+If myMethod() exists in B, but not in A,
+   - will not compile
+
+If myMethod() exists in both A and B,
+   - if both methods are non-static, B's implementation will execute
+   - if both methods are static, A's implementation will execute
+   - if only one method is static, will not compile.
+   - if A's method is private, A's implementation will execute.
+   - if B's method's visibility level (private, protected, etc) is weaker than A's visibility level, will not compile.
+36
+If the generic type of the reference is "Number", the generic type of the instantiation MUST also be "Number". It cannot be a sub class of Number, unless you have specified <? extends Number> as the generic type of the reference.
+
+List<Number> mb=new ArrayList<Integer>(); //gives a compile time error.
+List<? extends Number> mb=new ArrayList<Integer>(); //Correct.
+37
+Execution of the following methods require the calling thread to have obtained the monitor lock of the object on which the method is invoked.
+
+Object.notify()
+Object.notifyAll()
+Object.wait()
+Object.wait(long)
+
+For example, if you call one of these methods on an object called "obj", the caller thread must have already obtained "obj"'s monitor lock:
+
+void method(){
+   synchronized(obj){
+     obj.notifyAll();
+   }
+}
+
+
+If it is the current object ("this") on which the method should be called on, monitor lock of the current object should be obtained. It can be done as synchronized(this){ } , or, by synchronizing the whole method if it is non-static:
+
+void synchronized method(){
+   obj.notifyAll();
+}
+
+
+Failing to do so throws IllegalMonitorStateException
+38
+Remember that interface methods are always public and abstract; so you can't use any keyword that you can't use together with public and abstract.
+Eg: static, protected, private, strictfp, etc?
+39
+The contract of a correctly defined equals(Object) method is to check if the passed object has the same type as of the current object, and it has the same status as of the current object. Since Integer, Long, Float, and Double are different types, equals(-) comparison BETWEEN  these types will ALWAYS return false.
+40
+Note that a character after a back-slash (\) is a reserved syntax in Java. Following characters are the only characters that you can use with that syntax:
+
+    * \f
+    * \n
+    * \t
+    * \b
+    * \r
+41
+The keyword "super" is not valid at the generic declaration part for a method.
+
+public <A super B> int getValue(); // WRONG.
+42
+"instanceOf" is NOT a Java keyword. The similar-looking keyword available is "instanceof"; not "instanceOf". (check the case of 'O')
+Reset and start over
+About us Contact Privacy Services Terms and Copyrights ExamLab © 2014

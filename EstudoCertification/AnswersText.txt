@@ -1,0 +1,12 @@
+Answers 
+
+1-A,B,D
+2-B D
+3-D
+4-B,C,E
+5-B
+6-B
+7-C
+8-E,F  X wrong
+9-D
+10-A
