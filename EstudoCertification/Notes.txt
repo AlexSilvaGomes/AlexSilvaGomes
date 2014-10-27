@@ -142,6 +142,22 @@ Comparable cm=(Comparable)(Cloneable)(Iterable)(Runnable)i;
 
 54. Remember this statement-> synchronized(null) causes a compile error 
 
+54. A interface is-a java.lang.Object and don't extend java.lang.Interface.
+
+55. Pay Attention to this methods Collections.reverse(List<?> list) 
+ Collections.reverseOrder(); return a Comparator and Collections.reverseOrder(Comparator<T> cmp) return a Comparator inverse.
+ 
+56. If we have three overloaded methods with the same hierarchy and we pass a null value to it 
+the most subclass will be evoked, however if this class is not of the same hierarchy a compile time error would be thrown 
+
+57. compile erro new Byte(4);  because you cannot pass a int to byte constructor , 
+this is the correct statement-> new Byte((byte)4); 
+
+58. Note that the getInstance(Locale) method is NOT available in DateFormat class
+
+59. The method FileRader.read(Char[] c) returns the number of characters read.
+
+60. Switch blocks always require its body to be placed inside curly brackets.
 
 
 

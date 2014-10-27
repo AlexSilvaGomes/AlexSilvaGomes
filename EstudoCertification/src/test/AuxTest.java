@@ -1,5 +1,7 @@
 package test;
+
 public abstract strictfp class AuxTest {
+
 
 	
 	 protected abstract void method();
@@ -12,9 +14,7 @@ public abstract strictfp class AuxTest {
 	public static void main(String[] args) {
         
 		
-		System.out.print((int)Character.MIN_VALUE+","+(int)Character.MAX_VALUE);
-		A a = new B();
-		B b = (B) new A();
+
 		
 		
 		A[] ab = new A[5];
@@ -27,11 +27,10 @@ public abstract strictfp class AuxTest {
 	
 		System.out.printf("\nCurrent value is %,+-50.1f",-12300.000);
 		
+
 	}
 	
 }
 
 
-class A{}
-class B extends A{}
 
