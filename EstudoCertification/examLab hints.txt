@@ -1,32 +1,4 @@
 
-Premium Account
-My Features
-Welcome, Alex!
-Take a test
-
-Diagnostic Exam
-60 questions. 150 minutes
-Practice Exam 1
-60 questions. 150 minutes
-Practice Exam 2
-60 questions. 150 minutes
-Practice Exam 3
-60 questions. 150 minutes
-Practice Exam 4
-60 questions. 150 minutes
-Final Exam
-60 questions. 150 minutes
-Pass Guaranteed Exam
-21 questions. 8 time
-Features
-
-Systemup™
-My Test Results
-Pass Guaranteed Results
-
-We have analyzed the answers you have submitted. Accordingly, following content has been generated for you to ensure your exam pass. Please read the exam hints generated for you. We assure your exam pass, with a 100% money-back guarantee.
-Exam hints generated for you
-
 Following exam-oriented hints are generated analyzing your answers and speculating what additional things you must know to pass the exam. Please print this page or write down these facts on a piece of paper. Make sure you have concerned all of these hints before you attend the exam.
 1
 "Meta characters" are the characters what you can use inside a "regular expression" (Pattern, Scanner...). Meta characters must be started with a back-slash (\)
@@ -318,4 +290,5 @@ public <A super B> int getValue(); // WRONG.
 42
 "instanceOf" is NOT a Java keyword. The similar-looking keyword available is "instanceof"; not "instanceOf". (check the case of 'O')
 Reset and start over
+>>>>>>> branch 'master' of https://github.com/AlexSilvaGomes/EstudoCertification.git
 About us Contact Privacy Services Terms and Copyrights ExamLab © 2014

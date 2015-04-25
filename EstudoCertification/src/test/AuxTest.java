@@ -7,18 +7,13 @@ public abstract strictfp class AuxTest {
 	
 	public static void main(String[] args) {
 		
-				A a[] = new B[3];
-				
-				a[0] = new C();
-				a[1] = new B();
-				
-				Short i = (short) 129;
-                Short j = (short)129;
-				System.out.println(i==j);				
+		A a = new A();
+		//X x = (X)a; // compiles
+		//a = (A)x; // compiles		
 	}
 }
 
-
-class A{}
-class B extends A{}
-class C extends B{}
+interface X{}
+final class  A{}
+class B{}
+class C{}

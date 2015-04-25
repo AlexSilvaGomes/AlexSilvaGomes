@@ -58,7 +58,7 @@ the result would be true.
 
 20. you gotta bear in mind that throwable is a checked exception.
 
-21. this statment leads to a compile error String s = new String(null); because the string class has two versions of overloaded
+21. this statement leads to a compile error String s = new String(null); because the string class has two versions of overloaded
 constructor becoming ambiguous which one to call.
 
 22. About printf or formatter classes , when I have a String s= "false"; and the following code
@@ -140,6 +140,8 @@ Comparable cm=(Comparable)(Cloneable)(Iterable)(Runnable)i;
 
 53. The combination "final volatile" is invalid.
 
+54. Remember this statement-> synchronized(null) causes a compile error 
+
 54. A interface is-a java.lang.Object and don't extend java.lang.Interface.
 
 55. Pay Attention to this methods Collections.reverse(List<?> list) 
@@ -156,6 +158,12 @@ this is the correct statement-> new Byte((byte)4);
 59. The method FileRader.read(Char[] c) returns the number of characters read.
 
 60. Switch blocks always require its body to be placed inside curly brackets.
+
+61. Using assert as a identifier works just in the 1.3 version but compiles with warnings.
+
+62. Short i = (short) 129;
+       Short j = (short) 129;   i==j this statement will be true if the wrapper is a Long , Integer and shorter a
+       and their values is lesser than 127
 
 
 
